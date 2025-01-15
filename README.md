@@ -1,6 +1,6 @@
 # rereference
 
-With all of the mutations accumulated in the modern strains of SARS-CoV-2 (or other such genomes), newer samples may not align as well to the original reference sequence. It might make more sense to align to a newer Omicron sublineage instead. Here, we introduce a tool that repositions the reads from a BAM file relative to match the coordinates for a different reference sequence.
+With all of the mutations accumulated in the modern strains of SARS-CoV-2 (or other such genomes), newer samples may not align as well to the original reference sequence. It might make more sense to align to a newer Omicron sublineage instead. Here, we introduce a tool that repositions the reads from an input BAM file (which may have been aligned to one or multiple different SARS-CoV-2 lineages) to match the coordinates of a different reference sequence.
 
 ## When would you want this?
 Let's say you aligned your new reads to a BA.2 reference sequence or even several different lineages, hoping to better map more reads. You want to analyze the results with something like Freyja, but it relies on lineages definitions based on Wuhan-Hu-1 coordinates. You can use `rereference` to rewrite your bam file with corrected positions and the RNAME appropriately renamed. Then you can use your post-processing tools just like normal.
